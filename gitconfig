@@ -1,0 +1,48 @@
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = blue
+  untracked = cyan
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  quotepath = false
+
+[push]
+  default = upstream
+
+[commit]
+  template = ~/.gitmessage
+
+[alias]
+  a = add
+  aa = add --all
+  br = branch -a --color -v
+  branches = branch -a --color -v
+  co = checkout
+  cob = checkout -b
+  ci = commit
+  cm = commit -m
+  cam = commit -am
+  st = status
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  amend = commit -a --amend
+
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+
+[include]
+  path = ~/.gitconfig.local
