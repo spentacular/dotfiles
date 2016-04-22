@@ -3,6 +3,7 @@ hs.window.animationDuration = 0
 
 -- hotkeys
 local mash = {"cmd", "alt"}
+local winMash = {"shift", "alt"}
 
 ----------------------------------------------------------------------------------
 -- Launch Applications
@@ -17,6 +18,10 @@ end)
 
 hs.hotkey.bind(mash, 'g', function ()
   hs.application.launchOrFocus("Google Chrome")
+end)
+
+hs.hotkey.bind(mash, 's', function ()
+  hs.application.launchOrFocus("Sublime Text")
 end)
 
 ----------------------------------------------------------------------------------
@@ -90,6 +95,78 @@ hs.hotkey.bind({"alt"}, "J", function()
   end
 end)
 
+----------------------------------------------------------------------------------
+-- Quarter Window Bindings
+hs.hotkey.bind(winMash, "1", function()
+  if hs.window.focusedWindow() then
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+
+    f.x = max.x
+    f.y = max.y
+    f.w = max.w / 4
+    f.h = max.h
+    win:setFrame(f)
+  else
+    hs.alert.show("No active window")
+  end
+end)
+
+hs.hotkey.bind(winMash, "2", function()
+  if hs.window.focusedWindow() then
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+
+    f.x = max.x + (max.w / 4)
+    f.y = max.y
+    f.w = max.w / 4
+    f.h = max.h
+    win:setFrame(f)
+  else
+    hs.alert.show("No active window")
+  end
+end)
+
+hs.hotkey.bind(winMash, "3", function()
+  if hs.window.focusedWindow() then
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+
+    f.x = max.x + (2 * (max.w / 4))
+    f.y = max.y
+    f.w = max.w / 4
+    f.h = max.h
+    win:setFrame(f)
+  else
+    hs.alert.show("No active window")
+  end
+end)
+
+hs.hotkey.bind(winMash, "4", function()
+  if hs.window.focusedWindow() then
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+
+    f.x = max.x + (3 * (max.w / 4))
+    f.y = max.y
+    f.w = max.w / 4
+    f.h = max.h
+    win:setFrame(f)
+  else
+    hs.alert.show("No active window")
+  end
+end)
+
+----------------------------------------------------------------------------------
+-- Quad Corner Window Bindings
 hs.hotkey.bind({"alt"}, "1", function()
   if hs.window.focusedWindow() then
     local win = hs.window.focusedWindow()
@@ -158,6 +235,8 @@ hs.hotkey.bind({"alt"}, "4", function()
   end
 end)
 
+----------------------------------------------------------------------------------
+-- Full Center Window Bindings
 hs.hotkey.bind({"alt", "shift"}, "Return", function()
   if hs.window.focusedWindow() then
     local win = hs.window.focusedWindow()
@@ -174,3 +253,17 @@ hs.hotkey.bind({"alt", "shift"}, "Return", function()
     hs.alert.show("No active window")
   end
 end)
+
+----------------------------------------------------------------------------------
+-- Network connection and disconnection
+local wifiWatcher = nil
+function ssidChangedCallback()
+    newSSID = hs.wifi.currentNetwork()
+    if newSSID then
+      hs.alert.show("Network connected: " .. newSSID)
+    else
+      hs.alert.show("Network lost :(")
+    end
+end
+wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
+wifiWatcher:start()

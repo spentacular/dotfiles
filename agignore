@@ -2,6 +2,6 @@ log
 tags
 tmp
 vendor
-.git/
-bower_components/
-node_modules/
+.git
+bower_components
+node_modules
