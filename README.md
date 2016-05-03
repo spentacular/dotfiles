@@ -31,4 +31,5 @@ env RCRC=$HOME/.dotfiles/rcrc rcup # change .dotfiles to your local repo
 - [@pengwynn Dotfiles](https://github.com/pengwynn/dotfiles)
 - [GitHub ❤ ~/](https://dotfiles.github.io/)
 - [@junegunn Dotfiles](https://github.com/junegunn/dotfiles)
-- [@holeman Dotfiles](https://github.com/holman/dotfiles)
+- [@holman Dotfiles](https://github.com/holman/dotfiles)
+- [@mhartington Dotfiles](https://github.com/mhartington/dotfiles)
