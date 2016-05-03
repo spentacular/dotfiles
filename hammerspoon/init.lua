@@ -8,262 +8,93 @@ local winMash = {"shift", "alt"}
 ----------------------------------------------------------------------------------
 -- Launch Applications
 
-hs.hotkey.bind(mash, 't', function ()
-  hs.application.launchOrFocus("Terminal")
-end)
+local focusKeys = {
+  a="Atom",
+  c="Google Chrome",
+  e="TextEdit",
+  s="Safari",
+  t="iTerm"
+}
 
-hs.hotkey.bind(mash, 'e', function ()
-  hs.application.launchOrFocus("TextEdit")
-end)
+for key in pairs(focusKeys) do
+  hs.hotkey.bind(mash, key, function()
+    hs.application.launchOrFocus(focusKeys[key])
+  end)
+end
+----------------------------------------------------------------------------------
+-- Half Window Bindings
 
-hs.hotkey.bind(mash, 'g', function ()
-  hs.application.launchOrFocus("Google Chrome")
-end)
+local halfWindowKeys = {
+  h={x=0, y=0, w=0.5, h=1},
+  j={x=0, y=0.5, w=1, h=0.5},
+  k={x=0, y=0, w=1, h=0.5},
+  l={x=0.5, y=0, w=0.5, h=1}
+}
 
-hs.hotkey.bind(mash, 's', function ()
-  hs.application.launchOrFocus("Sublime Text")
-end)
+for key in pairs(halfWindowKeys) do
+  hs.hotkey.bind({"alt"}, key, function()
+    local win = hs.window.focusedWindow()
+    if win then win:moveToUnit(halfWindowKeys[key]) end
+  end)
+end
 
 ----------------------------------------------------------------------------------
--- Window Bindings
+-- Quarter Corner Window Bindings
 
-hs.hotkey.bind({"alt"}, "H", function()
-  if hs.window.focusedWindow() then
+local quarterCornerWindowKeys = {
+  ['1']={x=0, y=0, w=0.5, h=0.5},
+  ['2']={x=0.5, y=0, w=0.5, h=0.5},
+  ['3']={x=0, y=0.5, w=0.5, h=0.5},
+  ['4']={x=0.5, y=0.5, w=0.5, h=0.5}
+}
+
+for key in pairs(quarterCornerWindowKeys) do
+  hs.hotkey.bind({'alt'}, key, function()
     local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "L", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (max.w / 2)
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "K", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "J", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y + (max.h / 2)
-    f.w = max.w
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
+    if win then win:moveToUnit(quarterCornerWindowKeys[key]) end
+  end)
+end
 
 ----------------------------------------------------------------------------------
--- Quarter Window Bindings
-hs.hotkey.bind(winMash, "1", function()
-  if hs.window.focusedWindow() then
+-- Quarter Column Window Bindings
+local quarterColWindowKeys = {
+  ['1']={x=0, y=0, w=0.25, h=1},
+  ['2']={x=0.25, y=0, w=0.25, h=1},
+  ['3']={x=0.5, y=0, w=0.25, h=1},
+  ['4']={x=0.75, y=0, w=0.25, h=1}
+}
+
+for key in pairs(quarterColWindowKeys) do
+  hs.hotkey.bind(winMash, key, function()
     local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w / 4
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind(winMash, "2", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (max.w / 4)
-    f.y = max.y
-    f.w = max.w / 4
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind(winMash, "3", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (2 * (max.w / 4))
-    f.y = max.y
-    f.w = max.w / 4
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind(winMash, "4", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (3 * (max.w / 4))
-    f.y = max.y
-    f.w = max.w / 4
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
+    if win then win:moveToUnit(quarterColWindowKeys[key]) end
+  end)
+end
 
 ----------------------------------------------------------------------------------
--- Quad Corner Window Bindings
-hs.hotkey.bind({"alt"}, "1", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "2", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (max.w / 2)
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "3", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x + (max.w / 2)
-    f.y = max.y + (max.h / 2)
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-hs.hotkey.bind({"alt"}, "4", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-
-    f.x = max.x
-    f.y = max.y + (max.h / 2)
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
-end)
-
-----------------------------------------------------------------------------------
--- Full Center Window Bindings
+-- Full Window Bindings
 hs.hotkey.bind({"alt", "shift"}, "Return", function()
-  if hs.window.focusedWindow() then
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+  local win = hs.window.focusedWindow()
+  if win then win:moveToUnit({x=0, y=0, w=1, h=1}) end
+end)
 
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w
-    f.h = max.h
-    win:setFrame(f)
-  else
-    hs.alert.show("No active window")
-  end
+----------------------------------------------------------------------------------
+-- Eighth Center Window Bindings
+hs.hotkey.bind({"cmd", "shift"}, "Return", function()
+  local win = hs.window.focusedWindow()
+  if win then win:moveToUnit({x=0.1, y=0.1, w=0.8, h=0.8}) end
 end)
 
 ----------------------------------------------------------------------------------
 -- Network connection and disconnection
 local wifiWatcher = nil
 function ssidChangedCallback()
-    newSSID = hs.wifi.currentNetwork()
-    if newSSID then
-      hs.alert.show("Network connected: " .. newSSID)
-    else
-      hs.alert.show("Network lost :(")
-    end
+  newSSID = hs.wifi.currentNetwork()
+  if newSSID then
+    hs.alert.show("Network connected: " .. newSSID)
+  else
+    hs.alert.show("Network lost 💀")
+  end
 end
 wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
 wifiWatcher:start()
