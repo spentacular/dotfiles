@@ -3,6 +3,7 @@ fisherman/autojump
 fisherman/await
 edc/bass
 fisherman/fzf
+fisherman/getopts
 fisherman/gitignore
 oh-my-fish/plugin-grc
 fisherman/last_job_id
