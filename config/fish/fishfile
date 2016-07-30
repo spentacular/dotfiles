@@ -1,12 +1,16 @@
 spentacular/asdf-fish
 fisherman/autojump
 fisherman/await
-edc/bass
+fisherman/fnm
 fisherman/fzf
+fisherman/get_file_age
 fisherman/getopts
 fisherman/gitignore
 oh-my-fish/plugin-grc
 fisherman/last_job_id
+fisherman/menu
 0rax/narwhal
+fisherman/paths
 fisherman/spin
 fisherman/tio
+fisherman/z

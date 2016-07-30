@@ -83,7 +83,7 @@ wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
 wifiWatcher:start()
 
 -- Reload Config
-hs.hotkey.bind(cmdShift, "R", function()
+hs.hotkey.bind({'cmd', 'shift', 'alt'}, "R", function()
   hs.reload()
 end)
 hs.alert.show("Config loaded")

@@ -11,6 +11,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-commentary'
+Plug 'chriskempson/base16-vim'
+Plug 'rakr/vim-one'
+Plug 'atelierbram/Base2Tone-vim'
 
 call plug#end()
 
@@ -24,7 +27,7 @@ set t_Co=256
 set encoding=utf-8
 
 " Enable mouse use in all modes
-set mouse=a
+" set mouse=a
 
 " Turn Off Swap Files
 " ===================
@@ -45,6 +48,12 @@ set linebreak                         " Wrap lines at convenient points
 " Color
 " =====
 
-"syntax enable
-"set background=dark
-"colorscheme duotone-dark
+set background=dark
+colorscheme one
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
+hi Normal ctermbg=none
+
+" Set Numbers
+set number
+set numberwidth=5
