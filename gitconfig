@@ -3,7 +3,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-	editor = atom --wait
+  editor = atom --wait
   quotepath = false
 
 [push]
@@ -40,4 +40,4 @@
 [include]
   path = ~/.gitconfig.local
 [diff]
-	compactionHeuristic = true
+  compactionHeuristic = true

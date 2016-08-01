@@ -1,0 +1,10 @@
+packages: [
+  "duotone-dark-space-syntax"
+  "editorconfig"
+  "language-fish-shell"
+  "linter"
+  "linter-eslint"
+  "linter-rubocop"
+  "package-sync"
+  "pigments"
+]
