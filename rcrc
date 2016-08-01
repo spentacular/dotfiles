@@ -1,3 +1,3 @@
 EXCLUDES="README.md license.md"
 DOTFILES_DIRS="$HOME/.dotfiles"
-UNDOTTED="Brewfile hammerspoon/init.lua config/fish/fishfile atom/keymap.cson atom/styles.less kwm/kwmrc"
+UNDOTTED="Brewfile hammerspoon/init.lua config/fish/fishfile atom/keymap.cson atom/styles.less atom/packages.cson kwm/kwmrc"
