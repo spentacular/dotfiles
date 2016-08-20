@@ -21,10 +21,9 @@ call plug#end()
 
 syntax on
 syntax enable
-set t_Co=256
 
 " General Config
-" set encoding=utf-8
+set encoding=utf-8
 set mouse=a
 set ttyfast
 
@@ -72,14 +71,13 @@ else
 endif
 
 " Color
-syntax on
+set background=dark
 colorscheme dracula
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
 
 " Set Numbers
 set number

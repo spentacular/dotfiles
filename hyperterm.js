@@ -66,7 +66,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyperterm-one-dark', 
+    'hyperterm-duotone-dark',
     'hyperterm-blink'
   ],
 
