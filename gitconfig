@@ -3,7 +3,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor = nvim
+  editor = vim
   quotepath = false
 
 [push]
@@ -39,5 +39,6 @@
 
 [include]
   path = ~/.gitconfig.local
+
 [diff]
   compactionHeuristic = true
