@@ -3,9 +3,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// Change comment styles for SF Mono
-.editor, atom-text-editor::shadow {
-  .comment {
-    font-style: normal;
-  }
+.title-bar {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+// Nucleus Theme Overrides
+@font-size: 12px;
+.tree-view, .list-item {
+   font-size: @font-size !important;
 }

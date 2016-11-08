@@ -15,7 +15,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -72,12 +74,21 @@ endif
 
 " Color
 set background=dark
-colorscheme dracula
+colorscheme base16-ocean
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 0
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_section_z = airline#section#create(['%l:%c:%L'])
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
 
 " Set Numbers
 set number
