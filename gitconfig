@@ -7,7 +7,7 @@
   quotepath = false
 
 [push]
-  default = simple
+  default = current
 
 [commit]
   template = ~/.gitmessage
@@ -16,21 +16,15 @@
   a = add
   aa = add --all
   amend = commit -a --amend
-  br = branch -a --color -v
+  br = branch
   branches = branch -a --color -v
-  c = commit
   ci = commit
-  cm = commit -m
   co = checkout
-  cob = checkout -b
   d = diff
-  dif = diff
-  pom = push origin master
-  phm = push heroku master
+  it = !git init && git commit -m “root” --allow-empty
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   pt = push --tags
-  s = status
-  st = status
+  st = status --short --branch
 
 [filter "lfs"]
   clean = git-lfs clean %f
