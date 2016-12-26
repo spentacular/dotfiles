@@ -16,8 +16,8 @@ Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim'
 Plug 'chriskempson/base16-vim'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
@@ -75,6 +75,7 @@ endif
 " Color
 set background=dark
 colorscheme base16-ocean
+" hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
 let g:airline_powerline_fonts = 0

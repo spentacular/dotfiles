@@ -92,7 +92,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-snazzy',
+    'hyperterm-atom-dark',
     'hyperterm-blink'
   ],
 
