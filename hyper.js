@@ -93,7 +93,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyperterm-atom-dark',
-    'hyperterm-blink'
+    'hyperterm-blink',
+    'hyper-statusline'
   ],
 
   // in development, you can create a directory under
