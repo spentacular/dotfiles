@@ -18,6 +18,8 @@ cask 'atom'
 cask 'font-roboto-mono'
 cask 'google-chrome'
 cask 'hammerspoon'
+cask 'hazel'
+cask 'sketch'
 
 mas '1Password', id: 443987910
 mas 'DaisyDisk', id: 411643860
