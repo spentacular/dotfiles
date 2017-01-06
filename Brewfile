@@ -16,10 +16,12 @@ brew 'thoughtbot/formulae/rcm'
 brew 'yarn'
 
 cask 'atom'
+cask 'font-fira-code'
 cask 'font-roboto-mono'
 cask 'google-chrome'
 cask 'hammerspoon'
 cask 'hazel'
+cask 'kap'
 cask 'sketch'
 cask 'visual-studio-code'
 
