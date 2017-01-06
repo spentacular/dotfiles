@@ -12,6 +12,7 @@ brew 'mas'
 brew 'mackup'
 brew 'node'
 brew 'pcre2'
+brew 'ripgrep'
 brew 'thoughtbot/formulae/rcm'
 brew 'yarn'
 
