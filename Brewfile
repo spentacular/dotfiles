@@ -9,6 +9,7 @@ brew 'git'
 brew 'grc'
 brew 'hub'
 brew 'mas'
+brew 'mackup'
 brew 'node'
 brew 'pcre2'
 brew 'thoughtbot/formulae/rcm'
@@ -20,6 +21,7 @@ cask 'google-chrome'
 cask 'hammerspoon'
 cask 'hazel'
 cask 'sketch'
+cask 'visual-studio-code'
 
 mas '1Password', id: 443987910
 mas 'DaisyDisk', id: 411643860
