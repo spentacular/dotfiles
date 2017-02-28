@@ -17,3 +17,8 @@ end
 function ia
   open $argv -a /Applications/iA\ Writer.app
 end
+
+# Single line list all with hidden files
+function ll
+  ls -1a $argv
+end

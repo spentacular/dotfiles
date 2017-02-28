@@ -23,7 +23,7 @@ alias ng 'npm list -g --depth=0 2>/dev/null'
 alias nl 'npm list --depth=0 2>/dev/null'
 
 # Git Helpers
-alias g git
+alias g 'git'
 alias gs 'git status --short --branch'
 alias ga 'git add -A .'
 alias gc 'git commit'
