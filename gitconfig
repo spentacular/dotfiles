@@ -7,7 +7,7 @@
   quotepath = false
 
 [push]
-  default = current
+  default = simple
 
 [commit]
   template = ~/.gitmessage
@@ -26,6 +26,13 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   pt = push --tags
   st = status --short --branch
+
+  prune = fetch --prune
+  # https://git-scm.com/docs/git-fetch#git-fetch--p
+
+  undo = reset --soft HEAD^
+  # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+
 
 [filter "lfs"]
   clean = git-lfs clean %f
