@@ -22,3 +22,7 @@ end
 function ll
   ls -1a $argv
 end
+
+function brewup
+  brew update; and brew doctor; and brew outdated; and brew upgrade; and brew cleanup
+end

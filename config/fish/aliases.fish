@@ -37,4 +37,4 @@ alias gco 'git checkout'
 alias gi 'gitignore'
 
 # Apps
-function a ; atom . ; end
+function a ; atom-beta . ; end
