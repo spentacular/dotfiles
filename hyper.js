@@ -100,7 +100,8 @@ module.exports = {
   plugins: [
     'hyper-chesterish',
     'hyper-blink',
-    'hyper-statusline'
+    'hyper-statusline',
+    'hyperlinks'
   ],
 
   // in development, you can create a directory under
