@@ -1,4 +1,12 @@
-# Configs
+# Go
+set -xg GOPATH ~/.go
+set PATH $PATH $GOPATH/bin
+
+# Rust
+set -xg PATH $PATH ~/.cargo/bin
+
+# Set node_modules to the end of path
+# https://github.com/zeke/add-local-binaries-to-path
 set -xg PATH $PATH ./node_modules/.bin
 
 source ~/.config/fish/aliases.fish

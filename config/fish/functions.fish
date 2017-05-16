@@ -26,3 +26,8 @@ end
 function brewup
   brew update; and brew doctor; and brew outdated; and brew upgrade; and brew cleanup
 end
+
+# Recursively delete node_modules
+function rmnm
+  find . -name "node_modules" -exec rm -rf '{}' +
+end

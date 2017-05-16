@@ -38,3 +38,4 @@ alias gi 'gitignore'
 
 # Apps
 function a ; atom-beta . ; end
+function c ; code . ; end
