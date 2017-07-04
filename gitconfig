@@ -7,7 +7,8 @@
   quotepath = false
 
 [push]
-  default = simple
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  default = current
 
 [commit]
   template = ~/.gitmessage
@@ -27,11 +28,13 @@
   pt = push --tags
   st = status --short --branch
 
-  prune = fetch --prune
   # https://git-scm.com/docs/git-fetch#git-fetch--p
+  prune = fetch --prune
 
-  undo = reset --soft HEAD^
   # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+  undo = reset --soft HEAD^
+
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
 
 
 [filter "lfs"]
