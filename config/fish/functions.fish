@@ -4,22 +4,22 @@ function git
 end
 
 # Make directory and CD into it
-function mcd
+function mcd --description 'Make directory and move into it'
   mkdir -p $argv; and cd $argv
 end
 
 # Cleanup .DS_Store files
-function dscleanup
+function dscleanup --description 'Recursively delete .DS_Store files'
   find . -type f -name "*.DS_Store" -ls -delete
 end
 
 # Open file in iA Writer
-function ia
+function ia --description 'Open file in iA Writer'
   open $argv -a /Applications/iA\ Writer.app
 end
 
 # Single line list all with hidden files
-function ll
+function ll --description 'List contents of directory'
   ls -1a $argv
 end
 
