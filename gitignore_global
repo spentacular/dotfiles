@@ -2,3 +2,5 @@
 .env
 *.log
 node_modules
+.envrc
+.npmrc

@@ -31,6 +31,9 @@ alias gm 'git merge'
 alias gi 'gitignore'
 alias gco 'git checkout'
 
+# Misc
+alias m 'make'
+
 # Apps
 function a ; atom . ; end
 function c ; code . ; end
