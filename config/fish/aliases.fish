@@ -7,11 +7,11 @@ function ..... ; cd ../../../.. ; end
 alias cask 'brew cask'
 
 # Scripts
-alias r 'npm run'
-alias s 'npm start'
-alias d 'npm run dev'
-alias b 'npm run build'
-alias t 'npm run test'
+alias r 'yarn run'
+alias s 'yarn start'
+alias d 'yarn run dev'
+alias b 'yarn run build'
+alias t 'yarn run test'
 
 # Only view top level installs
 alias ng 'npm list -g --depth=0 2>/dev/null'
