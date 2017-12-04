@@ -4,7 +4,7 @@ function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 
-alias cask 'brew cask'
+abbr cask 'brew cask'
 
 # Scripts
 alias r 'yarn run'
@@ -18,18 +18,18 @@ alias ng 'npm list -g --depth=0 2>/dev/null'
 alias nl 'npm list --depth=0 2>/dev/null'
 
 # Git Helpers
-alias g 'hub'
-alias gs 'git status --short --branch'
-alias ga 'git add -A .'
-alias gc 'git commit'
-alias gb 'git branch'
-alias gd 'git diff'
-alias gp 'git push'
-alias gl 'git pull'
-alias gt 'git tag'
-alias gm 'git merge'
-alias gi 'gitignore'
-alias gco 'git checkout'
+abbr g 'hub'
+abbr gs 'git status --short --branch'
+abbr ga 'git add -A .'
+abbr gc 'git commit'
+abbr gb 'git branch'
+abbr gd 'git diff'
+abbr gp 'git push'
+abbr gl 'git pull'
+abbr gt 'git tag'
+abbr gm 'git merge'
+abbr gi 'gitignore'
+abbr gco 'git checkout'
 
 # Misc
 alias m 'make'

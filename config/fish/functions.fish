@@ -23,6 +23,7 @@ function ll --description 'List contents of directory'
   ls -1a $argv
 end
 
+# Update Homebrew
 function brewup
   brew update; and brew doctor; and brew outdated; and brew upgrade; and brew cleanup
 end
