@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "alfred-bundlephobia": "^1.1.1",
+    "alfred-npms": "^2.1.0",
+    "create-react-app": "^3.0.1",
+    "fkill-cli": "^5.0.0",
+    "gatsby-cli": "^2.5.14",
+    "hotel": "^0.8.7",
+    "now": "^15.2.0",
+    "tldr": "^3.2.7"
+  }
+}

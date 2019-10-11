@@ -1,7 +1,0 @@
-*.DS_Store
-.env
-*.log
-node_modules
-.envrc
-.npmrc
-.vscode
