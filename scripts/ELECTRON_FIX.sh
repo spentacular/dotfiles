@@ -2,17 +2,17 @@
 
 # List all domains
 # $ defaults domains | tr ',' '\n'
+domains=(
+  com.microsoft.VSCode
+  com.microsoft.VSCode.helper
+  com.microsoft.VSCode.helper.EH
+  com.microsoft.VSCode.helper.NP
+  com.microsoft.VSCodeInsiders
+  com.microsoft.VSCodeInsiders.helper
+  co.zeit.hyper
+  co.zeit.hyper.helper
+)
 
-# vscode
-defaults write com.microsoft.VSCode CGFontRenderingFontSmoothingDisabled 0
-defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled 0
-defaults write com.microsoft.VSCode.helper.EH CGFontRenderingFontSmoothingDisabled 0
-defaults write com.microsoft.VSCode.helper.NP CGFontRenderingFontSmoothingDisabled 0
-
-# vscode insiders
-defaults write com.microsoft.VSCodeInsiders CGFontRenderingFontSmoothingDisabled 0
-defaults write com.microsoft.VSCodeInsiders.helper CGFontRenderingFontSmoothingDisabled 0
-
-# hyper
-defaults write co.zeit.hyper CGFontRenderingFontSmoothingDisabled 0
-defaults write co.zeit.hyper.helper CGFontRenderingFontSmoothingDisabled 0
+for i in "${domains[@]}"; do
+  defaults write $i CGFontRenderingFontSmoothingDisabled 0
+done

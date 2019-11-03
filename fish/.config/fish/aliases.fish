@@ -30,9 +30,3 @@ alias cask 'brew cask'
 alias services 'brew services'
 alias chmox='chmod +x'
 alias fs="stat -f \"%z bytes\""
-
-# Use modern make
-# https://github.com/tj/mmake
-if test -x $GOPATH/bin/mmake
-  alias make=mmake
-end
