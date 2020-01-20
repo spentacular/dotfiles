@@ -18,7 +18,7 @@ alias gt 'git tag'
 abbr gco 'git checkout'
 
 # Yarn
-alias r 'yarn run'
+# alias r 'yarn run'
 alias s 'yarn start'
 alias d 'yarn run dev'
 alias b 'yarn run build'
