@@ -45,10 +45,10 @@ hs.hotkey.bind(optcmd, '2', gridset(6,0,6,6))
 hs.hotkey.bind(optcmd, '3', gridset(6,6,6,6))
 hs.hotkey.bind(optcmd, '4', gridset(0,6,6,6))
 
-hs.hotkey.bind(optcmd, 'h', gridset(0,0,3,12))
-hs.hotkey.bind(optcmd, 'j', gridset(3,0,3,12))
-hs.hotkey.bind(optcmd, 'k', gridset(6,0,3,12))
-hs.hotkey.bind(optcmd, 'l', gridset(9,0,3,12))
+-- hs.hotkey.bind(optcmd, 'h', gridset(0,0,3,12))
+-- hs.hotkey.bind(optcmd, 'j', gridset(3,0,3,12))
+-- hs.hotkey.bind(optcmd, 'k', gridset(6,0,3,12))
+-- hs.hotkey.bind(optcmd, 'l', gridset(9,0,3,12))
 
 -- Reload on Write
 function reload_config(files)
