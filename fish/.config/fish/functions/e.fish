@@ -1,7 +1,7 @@
-function e -d "Open in code-insiders"
+function e -d "Open in default editor"
   if count $argv > /dev/null
-    code-insiders $argv
+    $EDITOR $argv
   else
-    code-insiders .
+    $EDITOR .
   end
 end
