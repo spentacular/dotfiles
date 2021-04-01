@@ -14,23 +14,30 @@
   prune = true
 
 [alias]
+  # basics
   a = add
-  aa = add --all
-  amend = commit -a --amend
-  br = branch
-  branches = branch -a --color -v
-  ci = commit
-  co = checkout
-  cm = commit -m
+  b = branch
+  c = commit
   d = diff
-  it = !git init && git commit -m “root” --allow-empty
+  f = fetch
+  g = grep
+  l = log
+  m = merge
+  o = checkout
+  p = pull
+  r = remote
+  s = status
+  w = whatchanged
+
+  aa = add --all
+  amend = commit --amend
+  branches = branch -a --color -v
+  cm = commit -m
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  pt = push --tags
   st = status --short --branch
   prune = fetch --prune
   undo = reset --soft HEAD^
-  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
-
+  who = shortlog --summary --
 
 [filter "lfs"]
   required = true

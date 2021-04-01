@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+MESSAGE='Initial commit'
+
+if [ -d ".git" ]; then
+  echo ".git directory already exists, aborting"
+  exit 1
+fi
+
+git init \
+  && git add . \
+  && git commit --allow-empty -m "$MESSAGE"

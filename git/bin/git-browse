@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD);
+REMOTE=$(git config branch."${BRANCH}".remote || echo "origin")
+
+if [[ $REMOTE == "" ]]; then
+  echo "Remote not found"
+  exit 1
+fi
+
+REMOTEURL=$(git remote get-url $REMOTE)
+
+if [[ $REMOTEURL == "git@"* ]]; then
+  URL=$(echo $REMOTEURL | sed -E -e 's/:/\//' -e 's/\.git$//' -e 's/.*@(.*)/http:\/\/\1/')
+elif [[ $remote_url = http* ]]
+then
+  URL=${remote_url%.git}
+fi
+
+open $URL
