@@ -45,11 +45,21 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 
-[diff]
-  tool = default-difftool
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 
-[difftool "default-difftool"]
-  cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[delta]
+  plus-style = "syntax #2C3F37"
+  minus-style = "syntax #6C4345"
+  syntax-theme = Dracula
+  navigate = true
+  side-by-side = true
+
+[interactive]
+  diffFilter = delta --color-only
 
 [include]
   path = ~/.gitconfig.local
