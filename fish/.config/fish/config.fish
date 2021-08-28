@@ -13,12 +13,13 @@ if test -e "$HOME/.extra.fish";
   source ~/.extra.fish
 end
 
-# Homebrew paths first, then custom local scripts
-fish_add_path -m /opt/homebrew/bin /usr/local/bin ~/bin
 # Node Version Manager
-fish_add_path -aP $VOLTA_HOME/bin
-# Yarn globals
-fish_add_path -aP ~/.config/yarn/global/node_modules/.bin
+fish_add_path $VOLTA_HOME/bin
+# Homebrew
+fish_add_path -a /opt/homebrew/bin
+fish_add_path -a /usr/local/bin
+# Local bins
+fish_add_path -a ~/bin
 
 # Set node_modules to the end of path
 # https://github.com/zeke/add-local-binaries-to-path
