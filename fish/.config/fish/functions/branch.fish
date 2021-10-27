@@ -1,6 +1,10 @@
 function branch -d "Fuzzy-find and checkout a branch"
-  # git branch \
-  #   | grep -v "^\*" \
-  #   | fzy \
-  #   | xargs git checkout
+  if count $argv > /dev/null
+    command git checkout $argv
+  else
+    git branch \
+      | grep -v "^\*" \
+      | fzy \
+      | xargs git checkout
+  end
 end
