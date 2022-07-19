@@ -1,4 +1,4 @@
-PACKAGES := `fd . -t d -d 1 --exclude '**/{scripts,yarn}' | tr '\n' ' '`
+PACKAGES := `echo */`
 
 brew:
   stow brew
@@ -11,3 +11,7 @@ uninstall:
 
 list:
   @echo {{PACKAGES}}
+
+bins:
+  chmod +x bin/bin/*
+  chmod +x git/bin/*

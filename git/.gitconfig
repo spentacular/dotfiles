@@ -1,45 +1,65 @@
 [color]
-	ui = auto
+  ui = auto
 
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
-	quotepath = false
+  excludesfile = ~/.gitignore_global
+  editor = code-insiders --wait
+  quotepath = false
 
 [push]
-	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = current
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  default = current
 
 [fetch]
-	prune = true
+  prune = true
 
 [alias]
-	a = add
-	aa = add --all
-	amend = commit -a --amend
-	br = branch
-	branches = branch -a --color -v
-	ci = commit
-	co = checkout
-	cm = commit -m
-	d = diff
-	it = !git init && git commit -m “root” --allow-empty
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	pt = push --tags
-	st = status --short --branch
-	prune = fetch --prune
-	undo = reset --soft HEAD^
-	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+  # basics
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  f = fetch
+  g = grep
+  l = log
+  m = merge
+  o = checkout
+  p = pull
+  r = remote
+  s = status
+  w = whatchanged
 
+  aa = add --all
+  amend = commit --amend
+  branches = branch -a --color -v
+  cm = commit -m
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  st = status --short --branch
+  prune = fetch --prune
+  undo = reset --soft HEAD^
+  who = shortlog --summary --
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 
-[diff]
-	compactionHeuristic = true
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+  plus-style = "syntax #2C3F37"
+  minus-style = "syntax #6C4345"
+  syntax-theme = Dracula
+  navigate = true
+  side-by-side = true
+
+[interactive]
+  diffFilter = delta --color-only
 
 [include]
-	path = ~/.gitconfig.local
+  path = ~/.gitconfig.local

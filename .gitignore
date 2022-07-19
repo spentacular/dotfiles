@@ -5,11 +5,6 @@ fishd.*
 .config/fish/fish_history
 fish/fish_history
 
-# ranger
-ranger/.config/ranger/colorschemes/__init__.py
-ranger/.config/ranger/colorschemes/__init__.pyo
-ranger/.config/ranger/colorschemes/candycane.pyo
-
 # Yarn globals
 yarn.lock
 .fnmrc
