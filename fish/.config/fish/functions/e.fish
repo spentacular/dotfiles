@@ -1,7 +1,8 @@
 function e -d "Open in default editor"
   if count $argv > /dev/null
-    $EDITOR $argv
+    # $EDITOR $argv
+    $VISUAL $argv
   else
-    $EDITOR .
+    $VISUAL .
   end
 end

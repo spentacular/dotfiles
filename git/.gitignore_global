@@ -33,3 +33,5 @@ node_modules
 .nvmrc
 *.code-workspace
 Justfile
+*.code-workspace
+*.code-search
