@@ -5,5 +5,7 @@
 ^/LICENSE.*
 ^/COPYING
 
+\.DS_Store
+
 Justfile
 macos
