@@ -1,6 +1,3 @@
-# disable new user greeting
-set fish_greeting
-
 # These came from the following file:
 # eval ($HOMEBREW_PREFIX/bin/brew shellenv)
 if test -e /opt/homebrew/bin/brew
@@ -35,7 +32,10 @@ set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_func
 # Editor variables
 set -gx PAGER less
 set -gx VISUAL code-insiders
-set -gx EDITOR vim
+set -gx EDITOR hx
+
+# disable new user greeting
+set fish_greeting
 
 # Add any computer specific configs
 if test -e "$HOME/.extra.fish";

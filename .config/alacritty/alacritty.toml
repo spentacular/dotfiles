@@ -1,0 +1,24 @@
+live_config_reload = true
+
+import = [
+  "~/.config/alacritty/dracula.toml"
+]
+
+[window]
+dimensions = { columns = 80, lines = 20 }
+padding = { x = 5, y = 5 }
+dynamic_title = true
+
+[font]
+normal = { family = "PragmataPro Mono Liga" }
+size = 12
+offset = { y = 4 }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[mouse]
+hide_when_typing = false
+
+# [shell]
+# program = "/opt/homebrew/bin/fish"

@@ -1,4 +1,8 @@
 # Cleanup .DS_Store files
 function dscleanup -d "Recursively delete .DS_Store files"
-  find . -type f -name "*.DS_Store" -ls -delete
+  if type -q fd
+    fd -H '^\.DS_Store$' -tf -X rm
+  else
+    echo "fd needs to be installed"
+  end
 end
