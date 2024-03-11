@@ -34,9 +34,6 @@ set -gx PAGER less
 set -gx VISUAL code-insiders
 set -gx EDITOR hx
 
-# disable new user greeting
-set fish_greeting
-
 # Add any computer specific configs
 if test -e "$HOME/.extra.fish";
   source ~/.extra.fish

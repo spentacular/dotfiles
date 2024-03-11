@@ -1,9 +1,9 @@
 [color]
-  ui = auto
+  ui = true
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor = code-insiders --wait
+  editor = hx
   quotepath = false
 
 [push]

@@ -5,7 +5,7 @@ abbr -a -- g git
 abbr -a -- gs 'git st'
 abbr -a -- ga 'git add -A .'
 abbr -a -- gp 'git push'
-abbr -a -- gc 'git commit -am'
+abbr -a -- gc 'git commit -m'
 abbr -a -- gb 'git branch'
 abbr -a -- gi 'gignore'
 

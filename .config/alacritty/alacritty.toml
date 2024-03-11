@@ -4,13 +4,19 @@ import = [
   "~/.config/alacritty/dracula.toml"
 ]
 
+[shell]
+program = "/opt/homebrew/bin/fish"
+args = ["-i"]
+
 [window]
 dimensions = { columns = 80, lines = 20 }
-padding = { x = 5, y = 5 }
-dynamic_title = true
+padding = { x = 8, y = 8 }
 
 [font]
-normal = { family = "PragmataPro Mono Liga" }
+normal = { family = "PragmataPro Mono Liga", style = "Regular" }
+bold = { family = "PragmataPro Mono Liga", style = "Bold" }
+italic = { family = "PragmataPro Mono Liga", style = "Italic" }
+bold_italic = { family = "PragmataPro Mono Liga", style = "Bold Italic" }
 size = 12
 offset = { y = 4 }
 
@@ -20,5 +26,9 @@ style = { shape = "Beam", blinking = "On" }
 [mouse]
 hide_when_typing = false
 
-# [shell]
-# program = "/opt/homebrew/bin/fish"
+[keyboard]
+bindings = [
+{ key = "[", mods = "Command", action = "SelectPreviousTab" },
+{ key = "]", mods = "Command", action = "SelectNextTab" },
+{ key = "n", mods = "Super", action = "SpawnNewInstance" },
+]
