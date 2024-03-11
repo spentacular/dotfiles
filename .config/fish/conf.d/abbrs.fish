@@ -7,11 +7,12 @@ abbr -a -- ga 'git add -A .'
 abbr -a -- gp 'git push'
 abbr -a -- gc 'git commit -am'
 abbr -a -- gb 'git branch'
+abbr -a -- gi 'gignore'
 
 # Yarn
-abbr -a -- s 'yarn start'
-abbr -a -- b 'yarn build'
-abbr -a -- t 'yarn test'
+abbr -a -- s 'nr start'
+abbr -a -- b 'nr build'
+abbr -a -- t 'nr test'
 
 # Misc
 abbr --add dotdot --regex '^\.\.+$' --function multicd
