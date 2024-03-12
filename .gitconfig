@@ -1,0 +1,71 @@
+[color]
+  ui = true
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = hx
+  quotepath = false
+
+[push]
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  default = current
+
+[pull]
+  rebase = false
+
+[fetch]
+  prune = true
+
+[alias]
+  # basics
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  f = fetch
+  g = grep
+  l = log
+  m = merge
+  o = checkout
+  p = pull
+  r = remote
+  s = status
+  w = whatchanged
+
+  aa = add --all
+  amend = commit --amend
+  branches = branch -a --color -v
+  cm = commit -m
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  st = status --short --branch
+  prune = fetch --prune
+  undo = reset --soft HEAD^
+  who = shortlog --summary --
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+  plus-style = "syntax #2C3F37"
+  minus-style = "syntax #6C4345"
+  syntax-theme = Dracula
+  navigate = true
+  side-by-side = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[include]
+  path = ~/.gitconfig.local
+
+[init]
+  defaultBranch = main

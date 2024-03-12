@@ -1,17 +1,8 @@
-PACKAGES := `echo */`
-
-brew:
-  stow brew
-
 install:
-  stow -t ~ {{PACKAGES}} --no-folding
+  stow .
 
 uninstall:
-  stow -Dt ~ {{PACKAGES}}
-
-list:
-  @echo {{PACKAGES}}
+  stow -D .
 
 bins:
-  chmod +x bin/bin/*
-  chmod +x git/bin/*
+  chmod +x bin/*

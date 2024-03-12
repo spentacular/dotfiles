@@ -1,0 +1,17 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+rulers = [80]
+bufferline = "multiple"
+
+[editor.lsp]
+display-messages = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[editor.indent-guides]
+render = true
+character = "╎"

@@ -1,0 +1,37 @@
+# Node
+npm-debug.log
+
+# OS or Editor files
+._*
+.DS_Store
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+
+# vi
+*~
+
+# General
+*.log
+
+# Package managers
+bower_components
+node_modules
+
+# Misc
+.npmrc
+.vscode
+*.sass-cache
+
+.envrc
+.npmrc
+.nvmrc
+*.code-workspace
+Justfile
+*.code-workspace
+*.code-search

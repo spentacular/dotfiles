@@ -1,0 +1,12 @@
+\.git
+\.gitignore
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+\.DS_Store
+
+Justfile
+macos
+Brewfile.lock.json

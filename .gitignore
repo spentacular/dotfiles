@@ -11,3 +11,5 @@ yarn.lock
 .nvmrc
 .vscode
 .DS_Store
+
+Brewfile.lock.json
