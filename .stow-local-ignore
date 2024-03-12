@@ -9,3 +9,4 @@
 
 Justfile
 macos
+Brewfile.lock.json
