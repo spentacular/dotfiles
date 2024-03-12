@@ -18,6 +18,7 @@ set -gx HOMEBREW_NO_ANALYTICS 1
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx BUN_INSTALL "$HOME/.bun"
+set -gx VOLTA_FEATURE_PNPM 1
 
 # Path setup
 fish_add_path -p /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin
