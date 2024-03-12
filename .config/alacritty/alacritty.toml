@@ -30,5 +30,4 @@ hide_when_typing = false
 bindings = [
 { key = "[", mods = "Command", action = "SelectPreviousTab" },
 { key = "]", mods = "Command", action = "SelectNextTab" },
-{ key = "n", mods = "Super", action = "SpawnNewInstance" },
 ]

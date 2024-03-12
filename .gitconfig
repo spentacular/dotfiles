@@ -10,6 +10,9 @@
   # https://git-scm.com/docs/git-config#git-config-pushdefault
   default = current
 
+[pull]
+  rebase = false
+
 [fetch]
   prune = true
 
