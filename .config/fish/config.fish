@@ -26,6 +26,7 @@ fish_add_path -a ~/bin
 fish_add_path -a $VOLTA_HOME/bin
 fish_add_path -a $PNPM_HOME
 fish_add_path -a $BUN_INSTALL/bin
+fish_add_path -a $HOME/.cargo/bin
 
 # Add function subdirectories to fish_function_path
 set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
@@ -34,6 +35,9 @@ set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_func
 set -gx PAGER less
 set -gx VISUAL code-insiders
 set -gx EDITOR hx
+
+# Shared variables for internal functions
+set -g ignored_git_dirs main master next
 
 # Add any computer specific configs
 if test -e "$HOME/.extra.fish";
