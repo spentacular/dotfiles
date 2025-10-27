@@ -1,5 +1,5 @@
 # These came from the following file:
-# eval ($HOMEBREW_PREFIX/bin/brew shellenv)
+# eval (brew shellenv)
 if test -e /opt/homebrew/bin/brew
   set -gx HOMEBREW_PREFIX "/opt/homebrew";
   set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
@@ -19,14 +19,21 @@ set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx VOLTA_FEATURE_PNPM 1
+set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 
 # Path setup
-fish_add_path -p /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin
-fish_add_path -a ~/bin
-fish_add_path -a $VOLTA_HOME/bin
-fish_add_path -a $PNPM_HOME
-fish_add_path -a $BUN_INSTALL/bin
-fish_add_path -a $HOME/.cargo/bin
+set -g prepath (
+  path filter \
+    /opt/homebrew/bin \
+    /opt/homebrew/sbin \
+    /usr/local/bin \
+    $HOME/bin \
+    $VOLTA_HOME/bin \
+    $BUN_INSTALL/bin \
+    $HOME/.cargo/bin
+)
+
+fish_add_path --prepend --move $prepath
 
 # Add function subdirectories to fish_function_path
 set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
@@ -42,4 +49,8 @@ set -g ignored_git_dirs main master next
 # Add any computer specific configs
 if test -e "$HOME/.extra.fish";
   source ~/.extra.fish
+end
+
+if type -q starship
+  starship init fish | source
 end
