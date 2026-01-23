@@ -1,20 +1,35 @@
-[color]
-  ui = true
-
 [core]
   excludesfile = ~/.gitignore_global
   editor = hx
   quotepath = false
+  pager = delta
+
+[init]
+  defaultBranch = main
+
+[commit]
+  verbose = true
 
 [push]
   # https://git-scm.com/docs/git-config#git-config-pushdefault
   default = current
+  autoSetupRemote = true
 
 [pull]
-  rebase = false
+  rebase = true
+  autoStash = true
+
+[merge]
+  conflictStyle = zdiff3
 
 [fetch]
   prune = true
+
+[status]
+  branch = true
+  short = true
+  showStash = true
+  showUntrackedFiles = all  # show individual untracked files
 
 [alias]
   # basics
@@ -37,7 +52,7 @@
   branches = branch -a --color -v
   cm = commit -m
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  st = status --short --branch
+  st = status
   prune = fetch --prune
   undo = reset --soft HEAD^
   who = shortlog --summary --
@@ -48,24 +63,18 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 
-[pager]
-  diff = delta
-  log = delta
-  reflog = delta
-  show = delta
-
 [delta]
-  plus-style = "syntax #2C3F37"
-  minus-style = "syntax #6C4345"
   syntax-theme = Dracula
   navigate = true
   side-by-side = true
+  dark = true
+  hunk-header-style = omit
 
 [interactive]
   diffFilter = delta --color-only
 
+[color]
+  ui = true
+
 [include]
   path = ~/.gitconfig.local
-
-[init]
-  defaultBranch = main

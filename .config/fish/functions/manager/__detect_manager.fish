@@ -3,7 +3,7 @@ function __detect_manager
 
   if test -n "$git_root"
     if test -e "$git_root/package.json"
-      __detect_manager_switch git_root
+      __detect_manager_switch $git_root
     else
       echo "Inside a .git directory, but no package.json found in project root"
       return 1
