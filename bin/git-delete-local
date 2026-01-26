@@ -2,20 +2,7 @@
 
 CURRENT_BRANCH=$(git branch --show-current)
 
-get_branches() {
-  git branch --format="%(refname:short)" \
-    | egrep -v "master|main|next|prerelease|$CURRENT_BRANCH" \
-    | gum choose --no-limit
-}
-
-BRANCHES=$(get_branches)
-
-if [[ -z "$BRANCHES" ]]; then
-  echo "No branches selected"
-  exit 1
-fi
-
-for branch in "${BRANCHES[@]}"; do
-  echo "Deleting branch $branch"
-  git branch -D "$branch"
-done
+git branch --format="%(refname:short)" \
+  | egrep -v "master|main|next|prerelease|$CURRENT_BRANCH" \
+  | gum choose --no-limit \
+  | xargs git branch -D
