@@ -3,11 +3,11 @@
 
 ^/README.*
 ^/LICENSE.*
+^/license.md
 ^/COPYING
 
 \.DS_Store
 
 Justfile
 macos
-Masfile
 Brewfile.lock.json

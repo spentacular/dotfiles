@@ -14,6 +14,15 @@ end
 
 set -gx HOMEBREW_NO_ANALYTICS 1
 
+# # Brew Bundle Management
+# set -gx HOMEBREW_BUNDLE_FILE_GLOBAL "~/.homebrew/Brewfile"
+# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_CASK 1
+# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_MAS 1
+# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_VSCODE 1
+# set -gx HOMEBREW_BUNDLE_DUMP_NO_CASK 1
+# set -gx HOMEBREW_BUNDLE_DUMP_NO_MAS 1
+# set -gx HOMEBREW_BUNDLE_DUMP_NO_VSCODE 1
+
 # Variables for specific tools
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -40,7 +49,7 @@ set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_func
 
 # Editor variables
 set -gx PAGER less
-set -gx VISUAL code-insiders
+set -gx VISUAL zed
 set -gx EDITOR hx
 
 # Shared variables for internal functions
@@ -56,5 +65,4 @@ end
 # end
 
 # Hermes Agent — ensure ~/.local/bin is on PATH
-fish_add_path "$HOME/.local/bin"
-
+# fish_add_path "$HOME/.local/bin"

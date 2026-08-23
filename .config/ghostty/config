@@ -9,7 +9,7 @@ macos-titlebar-proxy-icon = hidden
 macos-window-shadow = true
 
 font-size = 12
-font-family = TX-02
+font-family = JetBrainsMono
 
 mouse-hide-while-typing = true
 # config-file = berkeley-mono-variable
