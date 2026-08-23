@@ -4,6 +4,10 @@
   quotepath = false
   pager = delta
 
+[user]
+	name = Spencer Hamm
+	email = spentacular@gmail.com
+
 [init]
   defaultBranch = main
 
