@@ -1,6 +1,7 @@
-brewfile := "~/.homebrew/Brewfile"
-caskfile := "~/.homebrew/Caskfile"
-masfile := "~/.homebrew/Masfile"
+basepath := "~/.homebrew/"
+brew := "--brew --file " + basepath + "Brewfile"
+cask := "--cask --file " + basepath + "Caskfile"
+mas := "--mas --file " + basepath + "Masfile"
 
 stow:
   stow .
@@ -11,44 +12,53 @@ unstow:
 bins:
   chmod +x bin/*
 
+#####################################################################
+_install target:
+  brew bundle install {{target}}
+
 [group('install')]
 install: install-brew install-cask install-mas
 
 [group('install')]
-install-brew:
-  brew bundle install --file {{brewfile}}
+install-brew: (_install brew)
 
 [group('install')]
-install-cask:
-  brew bundle install --file {{caskfile}}
+install-cask: (_install cask)
 
 [group('install')]
-install-mas:
-  brew bundle install --file {{masfile}}
+install-mas: (_install mas)
+
+#####################################################################
+_dump target:
+  brew bundle dump --force {{target}}
 
 [group('dump')]
 dump: dump-brew dump-cask dump-mas
 
 [group('dump')]
-dump-brew:
-  brew bundle dump --brew --force --file {{brewfile}}
+dump-brew: (_dump brew)
 
 [group('dump')]
-dump-cask:
-  brew bundle dump --cask --force --file {{caskfile}}
+dump-cask: (_dump cask)
 
 [group('dump')]
-dump-mas:
-  brew bundle dump --mas --force --file {{masfile}}
+dump-mas: (_dump mas)
+
+#####################################################################
+_cleanup target:
+  brew bundle cleanup {{target}}
 
 [group('cleanup')]
-cleanup-brew:
-  brew bundle cleanup --brew --file {{brewfile}}
+cleanup-brew: (_cleanup brew)
 
 [group('cleanup')]
-cleanup-cask:
-  brew bundle cleanup --cask --file {{caskfile}}
+cleanup-cask: (_cleanup cask)
 
 [group('cleanup')]
-cleanup-mas:
-  brew bundle cleanup --mas --file {{masfile}}
+cleanup-mas: (_cleanup mas)
+
+#####################################################################
+# https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
+[group('defaults')]
+defaults-list:
+  defaults domains | tr ',' '\n'

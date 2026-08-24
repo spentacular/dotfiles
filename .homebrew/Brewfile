@@ -8,6 +8,8 @@ brew "bazelisk"
 brew "biome"
 # Format bazel BUILD files with a standard convention
 brew "buildifier"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
