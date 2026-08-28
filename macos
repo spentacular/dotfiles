@@ -28,7 +28,7 @@ defaults write -globalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Finder
 ###############################################################################
 # Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool false
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

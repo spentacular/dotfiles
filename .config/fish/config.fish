@@ -26,7 +26,8 @@ set -g prepath (
     /usr/local/bin \
     $HOME/bin \
     $BUN_INSTALL/bin \
-    $HOME/.cargo/bin
+    $HOME/.cargo/bin \
+    $HOME/.lmstudio/bin
 )
 
 fish_add_path --prepend --move $prepath
@@ -50,8 +51,3 @@ end
 # if type -q starship
 #   starship init fish | source
 # end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/shamm/.lmstudio/bin
-# End of LM Studio CLI section
-
