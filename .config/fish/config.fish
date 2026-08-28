@@ -14,20 +14,8 @@ end
 
 set -gx HOMEBREW_NO_ANALYTICS 1
 
-# # Brew Bundle Management
-# set -gx HOMEBREW_BUNDLE_FILE_GLOBAL "~/.homebrew/Brewfile"
-# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_CASK 1
-# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_MAS 1
-# set -gx HOMEBREW_BUNDLE_CLEANUP_NO_VSCODE 1
-# set -gx HOMEBREW_BUNDLE_DUMP_NO_CASK 1
-# set -gx HOMEBREW_BUNDLE_DUMP_NO_MAS 1
-# set -gx HOMEBREW_BUNDLE_DUMP_NO_VSCODE 1
-
 # Variables for specific tools
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx BUN_INSTALL "$HOME/.bun"
-set -gx VOLTA_FEATURE_PNPM 1
 set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 
 # Path setup
@@ -37,7 +25,6 @@ set -g prepath (
     /opt/homebrew/sbin \
     /usr/local/bin \
     $HOME/bin \
-    $VOLTA_HOME/bin \
     $BUN_INSTALL/bin \
     $HOME/.cargo/bin
 )
@@ -64,5 +51,7 @@ end
 #   starship init fish | source
 # end
 
-# Hermes Agent — ensure ~/.local/bin is on PATH
-# fish_add_path "$HOME/.local/bin"
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/shamm/.lmstudio/bin
+# End of LM Studio CLI section
+

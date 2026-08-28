@@ -1,7 +1,10 @@
-basepath := "~/.homebrew/"
-brew := "--brew --file " + basepath + "Brewfile"
-cask := "--cask --file " + basepath + "Caskfile"
-mas := "--mas --file " + basepath + "Masfile"
+basepath := env_var_or_default('HOME', '~') / ".homebrew"
+brew := "--brew --file " + basepath / "Brewfile"
+cask := "--cask --file " + basepath / "Caskfile"
+mas := "--mas --file " + basepath / "Masfile"
+
+default:
+  @just --list
 
 stow:
   stow .

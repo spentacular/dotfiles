@@ -16,6 +16,8 @@ brew "cmake"
 brew "coreutils"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Diff that understands syntax
+brew "difftastic"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Tool for exploring each layer in a docker image
@@ -58,6 +60,8 @@ brew "helix"
 brew "herdr", restart_service: :changed
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Review-first terminal diff viewer for agent-authored changesets
+brew "hunk"
 # Command-line benchmarking tool
 brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
@@ -68,6 +72,8 @@ brew "just"
 brew "lazygit"
 # YAML Parser
 brew "libyaml"
+# LLM inference in C/C++
+brew "llama.cpp"
 # Mac App Store command-line interface
 brew "mas"
 # High performance static file server
@@ -78,6 +84,8 @@ brew "mise"
 brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Rsync for cloud storage
@@ -90,6 +98,8 @@ brew "ripgrep"
 brew "rm-improved"
 # Intuitive find & replace CLI
 brew "sd"
+# Fuzzy Finder in rust!
+brew "sk"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)

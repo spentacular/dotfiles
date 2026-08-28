@@ -13,3 +13,5 @@ font-family = JetBrainsMono
 
 mouse-hide-while-typing = true
 # config-file = berkeley-mono-variable
+
+keybind = alt+backspace=text:\x1b\x7f
