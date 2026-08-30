@@ -1,0 +1,17 @@
+theme = personal
+
+window-padding-x = 8
+window-padding-y = 8
+window-height = 25
+window-width = 85
+
+macos-titlebar-proxy-icon = hidden
+macos-window-shadow = true
+
+font-size = 12
+font-family = JetBrainsMono
+
+mouse-hide-while-typing = true
+# config-file = berkeley-mono-variable
+
+keybind = alt+backspace=text:\x1b\x7f

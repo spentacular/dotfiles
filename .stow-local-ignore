@@ -3,6 +3,7 @@
 
 ^/README.*
 ^/LICENSE.*
+^/license.md
 ^/COPYING
 
 \.DS_Store

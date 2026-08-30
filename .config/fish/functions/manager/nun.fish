@@ -1,9 +1,9 @@
 function nun -d "Uninstall dependencies for the current package manager"
-  set -l manager (__detect)
+  set -l manager (__detect_manager)
 
   if test $manager = "npm"
-    npm uninstall $argv
+    command npm uninstall $argv
   else
-    $manager remove $argv
+    command $manager remove $argv
   end
 end

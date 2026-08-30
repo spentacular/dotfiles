@@ -9,10 +9,13 @@ abbr -a -- gc 'git commit -m'
 abbr -a -- gb 'git branch'
 abbr -a -- gi 'gignore'
 
-# Yarn
+# Node Package Managers
 abbr -a -- s 'nr start'
 abbr -a -- b 'nr build'
 abbr -a -- t 'nr test'
+
+abbr -a -- c clear
+abbr -a -- h history
 
 # Misc
 abbr --add dotdot --regex '^\.\.+$' --function multicd

@@ -23,15 +23,13 @@ Thumbs.db
 bower_components
 node_modules
 
-# Misc
-.npmrc
+# VSCode
 .vscode
-*.sass-cache
-
-.envrc
-.npmrc
-.nvmrc
-*.code-workspace
-Justfile
 *.code-workspace
 *.code-search
+
+# Misc
+.npmrc
+.envrc
+.nvmrc
+Justfile

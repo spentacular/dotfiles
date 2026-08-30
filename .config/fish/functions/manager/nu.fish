@@ -2,21 +2,25 @@ function nu -d "Update dependencies for the current package manager"
   argparse --name=nu 'i/interactive' -- $argv
   or return
 
-  set -l manager (__detect)
+  set -l manager (__detect_manager)
+  if test $status -eq 1
+    echo $manager
+    return
+  end
 
   if test -n "$_flag_i"
     if test $manager = "yarn"
-      yarn upgrade-interactive $argv
+      command yarn upgrade-interactive $argv
     else if $manager = "pnpm"
-      pnpm update -i $argv
+      command pnpm update -i $argv
     end
 
     return
   end
 
   if test $manager = "yarn"
-    yarn upgrade $argv
+    command yarn upgrade $argv
   else
-    $manager update $argv
+    command $manager update $argv
   end
 end

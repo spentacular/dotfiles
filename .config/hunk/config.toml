@@ -1,0 +1,13 @@
+mode = "auto"
+vcs = "git"
+watch = false
+line_numbers = true
+tab_width = 2
+wrap_lines = false
+transparent_background = true
+theme = "github-dark-high-contrast"
+hunk_headers = true
+menu_bar = true
+agent_notes = false
+copy_decorations = false
+cursor_line = "row"

@@ -1,8 +1,8 @@
-function e -d "Open in default editor"
+function e --wraps='open -b com.microsoft.VSCode' --description "Open in default editor"
   if count $argv > /dev/null
     # $EDITOR $argv
-    $VISUAL $argv
+    code $argv
   else
-    $VISUAL .
+    code .
   end
 end

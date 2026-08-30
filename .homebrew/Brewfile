@@ -1,0 +1,140 @@
+# Library for command-line editing
+brew "readline"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# User-friendly launcher for Bazel
+brew "bazelisk"
+# Toolchain of the web
+brew "biome"
+# Format bazel BUILD files with a standard convention
+brew "buildifier"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
+# Cross-platform make
+brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
+# Diff that understands syntax
+brew "difftastic"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Tool for exploring each layer in a docker image
+brew "dive"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Fast, simple fuzzy text selector with an advanced scoring algorithm
+brew "fzy"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Git extension for versioning large files
+brew "git-lfs"
+# Render markdown on the CLI
+brew "glow"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Colorize logfiles and command output
+brew "grc"
+# Command-line tool for generating regular expressions
+brew "grex"
+# Tool for glamorous shell scripts
+brew "gum"
+# Post-modern modal text editor
+brew "helix"
+# Agent multiplexer that lives in your terminal
+brew "herdr", restart_service: :changed
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Review-first terminal diff viewer for agent-authored changesets
+brew "hunk"
+# Command-line benchmarking tool
+brew "hyperfine"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Simple terminal UI for git commands
+brew "lazygit"
+# YAML Parser
+brew "libyaml"
+# LLM inference in C/C++
+brew "llama.cpp"
+# Mac App Store command-line interface
+brew "mas"
+# High performance static file server
+brew "miniserve"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Deep clean and optimize your Mac
+brew "mole"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Modern replacement for ps written in Rust
+brew "procs"
+# Rsync for cloud storage
+brew "rclone"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Command-line deletion tool focused on safety, ergonomics, and performance
+brew "rm-improved"
+# Intuitive find & replace CLI
+brew "sd"
+# Fuzzy Finder in rust!
+brew "sk"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Log file highlighter
+brew "tailspin"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
+# General purpose fuzzy finder TUI
+brew "television"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# Program that allows you to count code, quickly
+brew "tokei"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Your CLI home video recorder
+brew "vhs"
+# JavaScript toolchain manager for reproducible environments
+brew "volta"
+# Execute commands when watched files change
+brew "watchexec"
+# Watch files and take action when they change
+brew "watchman"
+# Why is this running?
+brew "witr"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"

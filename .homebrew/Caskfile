@@ -1,0 +1,36 @@
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Records audio from any application
+cask "audio-hijack"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Screen capturing tool
+cask "cleanshot"
+# Audio playback
+cask "farrago"
+# Collaborative team software
+cask "figma"
+# Audio editor
+cask "fission"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Chromium-based web browser
+cask "helium-browser"
+# Free and open-source media player
+cask "iina"
+# Cable-free audio router
+cask "loopback"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Sound and audio controller
+cask "soundsource"
+# Native GUI for Homebrew package management
+cask "taphouse"
+# Open-source code editor
+cask "visual-studio-code"
+# Open-source code editor
+cask "visual-studio-code@insiders"
+# Multiplayer code editor
+cask "zed"

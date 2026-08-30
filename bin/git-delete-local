@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+CURRENT_BRANCH=$(git branch --show-current)
+
+git branch --format="%(refname:short)" \
+  | egrep -v "master|main|next|prerelease|$CURRENT_BRANCH" \
+  | gum choose --no-limit \
+  | xargs git branch -D
