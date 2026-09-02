@@ -18,7 +18,7 @@ $character\
 right_format = """$all"""
 
 [directory]
-style = "cyan"
+style = "purple"
 format = "[$path ]($style)"
 truncation_length = 1
 

@@ -7,11 +7,14 @@ window-width = 85
 
 macos-titlebar-proxy-icon = hidden
 macos-window-shadow = true
+macos-titlebar-style = tabs
 
 font-size = 12
-font-family = JetBrainsMono
+font-family = "PragmataPro Mono Liga"
+adjust-cell-height = 3
 
 mouse-hide-while-typing = true
+cursor-style = block
 # config-file = berkeley-mono-variable
 
 keybind = alt+backspace=text:\x1b\x7f
