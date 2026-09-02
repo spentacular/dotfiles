@@ -128,6 +128,8 @@ brew "watchexec"
 brew "watchman"
 # Why is this running?
 brew "witr"
+# CLI for Git worktree management, designed for parallel AI agent workflows
+brew "worktrunk"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
