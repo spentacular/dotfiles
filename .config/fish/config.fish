@@ -48,6 +48,6 @@ if test -e "$HOME/.extra.fish";
   source ~/.extra.fish
 end
 
-# if type -q starship
-#   starship init fish | source
-# end
+if type -q starship
+  starship init fish | source
+end

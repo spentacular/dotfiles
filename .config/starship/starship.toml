@@ -1,23 +1,68 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
+scan_timeout = 100
+command_timeout = 500
+palette = "personal"
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format="$all"
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character\
+"""
 
-right_format = """$status$cmd_duration"""
+right_format = """$all"""
+
+[directory]
+style = "cyan"
+format = "[$path ]($style)"
+truncation_length = 1
 
 [git_branch]
-symbol = " "
+symbol = "[](selection) "
+style = "fg:text bg:selection"
+format =  "[$symbol$branch]($style)[](selection)"
+
+# [git_status]
+# untracked = "⚑"
+# deleted = "✕"
+# modified = "±"
 
 [git_status]
-untracked = "⚑"
-deleted = "✕"
-modified = "±"
+format = " [$untracked$staged$modified$renamed$conflicted$ahead_behind ]($style)"
+# options available for format
+staged     = "[+](green)"
+modified   = "[!](pink)"
+renamed    = "[»](yellow)"
+deleted    = "[-](red)"
+untracked  = "[?](red)"
+stashed    = "[≡](purple)"
+conflicted = "[✖](red bold)"
+
+ahead      = "[⇡${count}](cyan)"
+behind     = "[⇣${count}](pink)"
+diverged   = "[⇕⇡${ahead_count}⇣${behind_count}](orange)"
 
 [character]
 format = "$symbol "
-success_symbol = "[❯](white)"
-error_symbol = "[❯](red)"
+success_symbol = "[➜](white)"
+error_symbol = "[➜](red)"
 
+
+[palettes.personal]
+base = "#22212C"
+text = "#F8F8F2"
+highlight = "#7970A9"
+selection = "#454158"
+
+cyan = "#80FFEA"
+green = "#8AFF80"
+orange = "#FFCA80"
+pink = "#FF80BF"
+purple = "#9580FF"
+red = "#FF9580"
+yellow = "#FFFF80"
