@@ -9,7 +9,7 @@ function __detect_manager
       return 1
     end
   else if test -e "$PWD/package.json"
-    __detect_manager_switch $pwd
+    __detect_manager_switch $PWD
   else
     echo "No package.json found in current directory"
     return 1
@@ -22,6 +22,8 @@ function __detect_manager_switch
   else if test -e "$argv/yarn.lock"
     echo "yarn"
   else if test -e "$argv/bun.lockb"
+    echo "bun"
+  else if test -e "$argv/bun.lock"
     echo "bun"
   else if test -e "$argv/package-lock.json"
     echo "npm"

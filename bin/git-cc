@@ -1,4 +1,5 @@
 #!/bin/zsh
+trap "exit 1" INT
 
 # Write commit using the conventional commit format
 #
@@ -11,7 +12,7 @@ if [[ -n $NEEDS_STAGING ]]; then
 fi
 
 TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
-JIRA=$(git symbolic-ref --short HEAD | egrep -o -m 1 "[a-zA-Z]{3,}-[\d]{3,}" | xargs echo)
+JIRA=$(git symbolic-ref --short HEAD | egrep -o -m 1 "[a-zA-Z]{3,}-\d{3,}" | xargs echo)
 SCOPE=$(gum input --value "$JIRA" --placeholder "Jira ID")
 
 test -n "$SCOPE" && SCOPE="($SCOPE)"
